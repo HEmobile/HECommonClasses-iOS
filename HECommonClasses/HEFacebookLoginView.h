@@ -7,7 +7,7 @@
 //
 
 
-#if __has_include("GAITrackedViewController.h")
+#if __has_include("FBLoginView.h")
 #import "FBLoginView.h"
 @interface HEFacebookLoginView : FBLoginView
 #else
