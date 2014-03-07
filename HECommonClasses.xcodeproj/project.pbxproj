@@ -16,6 +16,14 @@
 		A583AE0918CA12AA001E9ED0 /* libHECommonClasses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A583ADF118CA12AA001E9ED0 /* libHECommonClasses.a */; };
 		A583AE0F18CA12AA001E9ED0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A583AE0D18CA12AA001E9ED0 /* InfoPlist.strings */; };
 		A583AE1118CA12AA001E9ED0 /* HECommonClassesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A583AE1018CA12AA001E9ED0 /* HECommonClassesTests.m */; };
+		A583AE2A18CA12CF001E9ED0 /* HEActivityIndicatorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A583AE1B18CA12CF001E9ED0 /* HEActivityIndicatorButton.m */; };
+		A583AE2B18CA12CF001E9ED0 /* HEBasicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A583AE1D18CA12CF001E9ED0 /* HEBasicTableViewController.m */; };
+		A583AE2C18CA12CF001E9ED0 /* HEFacebookLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = A583AE1F18CA12CF001E9ED0 /* HEFacebookLoginView.m */; };
+		A583AE2D18CA12CF001E9ED0 /* HEInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A583AE2118CA12CF001E9ED0 /* HEInfoViewController.m */; };
+		A583AE2E18CA12CF001E9ED0 /* HorizontalSeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = A583AE2318CA12CF001E9ED0 /* HorizontalSeparator.m */; };
+		A583AE2F18CA12CF001E9ED0 /* NSDictionary+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = A583AE2518CA12CF001E9ED0 /* NSDictionary+Validate.m */; };
+		A583AE3018CA12CF001E9ED0 /* NSManagedObject+LocalAccessors.m in Sources */ = {isa = PBXBuildFile; fileRef = A583AE2718CA12CF001E9ED0 /* NSManagedObject+LocalAccessors.m */; };
+		A583AE3118CA12CF001E9ED0 /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A583AE2918CA12CF001E9ED0 /* NSString+Helper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,22 @@
 		A583AE0C18CA12AA001E9ED0 /* HECommonClassesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HECommonClassesTests-Info.plist"; sourceTree = "<group>"; };
 		A583AE0E18CA12AA001E9ED0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A583AE1018CA12AA001E9ED0 /* HECommonClassesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HECommonClassesTests.m; sourceTree = "<group>"; };
+		A583AE1A18CA12CF001E9ED0 /* HEActivityIndicatorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEActivityIndicatorButton.h; sourceTree = "<group>"; };
+		A583AE1B18CA12CF001E9ED0 /* HEActivityIndicatorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEActivityIndicatorButton.m; sourceTree = "<group>"; };
+		A583AE1C18CA12CF001E9ED0 /* HEBasicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEBasicTableViewController.h; sourceTree = "<group>"; };
+		A583AE1D18CA12CF001E9ED0 /* HEBasicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEBasicTableViewController.m; sourceTree = "<group>"; };
+		A583AE1E18CA12CF001E9ED0 /* HEFacebookLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEFacebookLoginView.h; sourceTree = "<group>"; };
+		A583AE1F18CA12CF001E9ED0 /* HEFacebookLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEFacebookLoginView.m; sourceTree = "<group>"; };
+		A583AE2018CA12CF001E9ED0 /* HEInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEInfoViewController.h; sourceTree = "<group>"; };
+		A583AE2118CA12CF001E9ED0 /* HEInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEInfoViewController.m; sourceTree = "<group>"; };
+		A583AE2218CA12CF001E9ED0 /* HorizontalSeparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalSeparator.h; sourceTree = "<group>"; };
+		A583AE2318CA12CF001E9ED0 /* HorizontalSeparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalSeparator.m; sourceTree = "<group>"; };
+		A583AE2418CA12CF001E9ED0 /* NSDictionary+Validate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Validate.h"; sourceTree = "<group>"; };
+		A583AE2518CA12CF001E9ED0 /* NSDictionary+Validate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Validate.m"; sourceTree = "<group>"; };
+		A583AE2618CA12CF001E9ED0 /* NSManagedObject+LocalAccessors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+LocalAccessors.h"; sourceTree = "<group>"; };
+		A583AE2718CA12CF001E9ED0 /* NSManagedObject+LocalAccessors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+LocalAccessors.m"; sourceTree = "<group>"; };
+		A583AE2818CA12CF001E9ED0 /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
+		A583AE2918CA12CF001E9ED0 /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +134,22 @@
 		A583ADF618CA12AA001E9ED0 /* HECommonClasses */ = {
 			isa = PBXGroup;
 			children = (
+				A583AE1A18CA12CF001E9ED0 /* HEActivityIndicatorButton.h */,
+				A583AE1B18CA12CF001E9ED0 /* HEActivityIndicatorButton.m */,
+				A583AE1C18CA12CF001E9ED0 /* HEBasicTableViewController.h */,
+				A583AE1D18CA12CF001E9ED0 /* HEBasicTableViewController.m */,
+				A583AE1E18CA12CF001E9ED0 /* HEFacebookLoginView.h */,
+				A583AE1F18CA12CF001E9ED0 /* HEFacebookLoginView.m */,
+				A583AE2018CA12CF001E9ED0 /* HEInfoViewController.h */,
+				A583AE2118CA12CF001E9ED0 /* HEInfoViewController.m */,
+				A583AE2218CA12CF001E9ED0 /* HorizontalSeparator.h */,
+				A583AE2318CA12CF001E9ED0 /* HorizontalSeparator.m */,
+				A583AE2418CA12CF001E9ED0 /* NSDictionary+Validate.h */,
+				A583AE2518CA12CF001E9ED0 /* NSDictionary+Validate.m */,
+				A583AE2618CA12CF001E9ED0 /* NSManagedObject+LocalAccessors.h */,
+				A583AE2718CA12CF001E9ED0 /* NSManagedObject+LocalAccessors.m */,
+				A583AE2818CA12CF001E9ED0 /* NSString+Helper.h */,
+				A583AE2918CA12CF001E9ED0 /* NSString+Helper.m */,
 				A583ADF918CA12AA001E9ED0 /* HECommonClasses.h */,
 				A583ADFB18CA12AA001E9ED0 /* HECommonClasses.m */,
 				A583ADF718CA12AA001E9ED0 /* Supporting Files */,
@@ -224,7 +264,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A583AE3018CA12CF001E9ED0 /* NSManagedObject+LocalAccessors.m in Sources */,
+				A583AE2F18CA12CF001E9ED0 /* NSDictionary+Validate.m in Sources */,
+				A583AE3118CA12CF001E9ED0 /* NSString+Helper.m in Sources */,
+				A583AE2B18CA12CF001E9ED0 /* HEBasicTableViewController.m in Sources */,
 				A583ADFC18CA12AA001E9ED0 /* HECommonClasses.m in Sources */,
+				A583AE2D18CA12CF001E9ED0 /* HEInfoViewController.m in Sources */,
+				A583AE2A18CA12CF001E9ED0 /* HEActivityIndicatorButton.m in Sources */,
+				A583AE2C18CA12CF001E9ED0 /* HEFacebookLoginView.m in Sources */,
+				A583AE2E18CA12CF001E9ED0 /* HorizontalSeparator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
