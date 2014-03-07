@@ -5,13 +5,15 @@
 //  Created by Roberto Silva on 18/02/14.
 //  Copyright (c) 2014 HE:mobile. All rights reserved.
 //
-
-
-#if __has_include("FBLoginView.h")
-#import "FBLoginView.h"
-@interface HEFacebookLoginView : FBLoginView
+#if defined(__has_include)
+    #if __has_include("FBLoginView.h") && __has_include(<FBLoginView.h>)
+        #import "FBLoginView.h"
+        @interface HEFacebookLoginView : FBLoginView
+    #else
+        #import <UIKit/UIKit.h>
+        @interface HEFacebookLoginView : UIView
+    #endif
 #else
-#pragma message("HEFacebookLoginView requires the Facebook API")
 #import <UIKit/UIKit.h>
 @interface HEFacebookLoginView : UIView
 #endif
