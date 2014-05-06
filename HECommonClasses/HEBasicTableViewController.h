@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #if __has_include("GAITrackedViewController.h") && __has_include(<GAITrackedViewController.h>)
+#import <GAITrackedViewController.h>
 @interface HEBasicTableViewController : GAITrackedViewController<UITableViewDataSource, UITableViewDelegate>
 #else
 @interface HEBasicTableViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
