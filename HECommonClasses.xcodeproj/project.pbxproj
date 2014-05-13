@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5028738192294CB00CDA080 /* HEBasicCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5028737192294CB00CDA080 /* HEBasicCollectionViewController.m */; };
 		A583ADF518CA12AA001E9ED0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A583ADF418CA12AA001E9ED0 /* Foundation.framework */; };
 		A583ADFA18CA12AA001E9ED0 /* HECommonClasses.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A583ADF918CA12AA001E9ED0 /* HECommonClasses.h */; };
 		A583ADFC18CA12AA001E9ED0 /* HECommonClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = A583ADFB18CA12AA001E9ED0 /* HECommonClasses.m */; };
@@ -50,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A5028736192294CB00CDA080 /* HEBasicCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEBasicCollectionViewController.h; sourceTree = "<group>"; };
+		A5028737192294CB00CDA080 /* HEBasicCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEBasicCollectionViewController.m; sourceTree = "<group>"; };
 		A583ADF118CA12AA001E9ED0 /* libHECommonClasses.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHECommonClasses.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A583ADF418CA12AA001E9ED0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A583ADF818CA12AA001E9ED0 /* HECommonClasses-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HECommonClasses-Prefix.pch"; sourceTree = "<group>"; };
@@ -134,6 +137,7 @@
 		A583ADF618CA12AA001E9ED0 /* HECommonClasses */ = {
 			isa = PBXGroup;
 			children = (
+				A583ADF718CA12AA001E9ED0 /* Supporting Files */,
 				A583AE1A18CA12CF001E9ED0 /* HEActivityIndicatorButton.h */,
 				A583AE1B18CA12CF001E9ED0 /* HEActivityIndicatorButton.m */,
 				A583AE1C18CA12CF001E9ED0 /* HEBasicTableViewController.h */,
@@ -152,7 +156,8 @@
 				A583AE2918CA12CF001E9ED0 /* NSString+Helper.m */,
 				A583ADF918CA12AA001E9ED0 /* HECommonClasses.h */,
 				A583ADFB18CA12AA001E9ED0 /* HECommonClasses.m */,
-				A583ADF718CA12AA001E9ED0 /* Supporting Files */,
+				A5028736192294CB00CDA080 /* HEBasicCollectionViewController.h */,
+				A5028737192294CB00CDA080 /* HEBasicCollectionViewController.m */,
 			);
 			path = HECommonClasses;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5028738192294CB00CDA080 /* HEBasicCollectionViewController.m in Sources */,
 				A583AE3018CA12CF001E9ED0 /* NSManagedObject+LocalAccessors.m in Sources */,
 				A583AE2F18CA12CF001E9ED0 /* NSDictionary+Validate.m in Sources */,
 				A583AE3118CA12CF001E9ED0 /* NSString+Helper.m in Sources */,
