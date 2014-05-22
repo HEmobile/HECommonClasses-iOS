@@ -28,4 +28,5 @@
 
 
 - (void)setAttribute:(NSString *)attributeName withObject:(id)object;
+- (BOOL)isNew;;
 @end

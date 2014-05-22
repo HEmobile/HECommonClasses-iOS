@@ -142,4 +142,9 @@
     return results;
 }
 
+- (BOOL)isNew {
+    NSDictionary *vals = [self committedValuesForKeys:nil];
+    return [vals count] == 0;
+}
+
 @end
