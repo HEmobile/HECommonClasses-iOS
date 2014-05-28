@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A5028738192294CB00CDA080 /* HEBasicCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5028737192294CB00CDA080 /* HEBasicCollectionViewController.m */; };
+		A50DCFBE193641A3003231B9 /* HeBasicLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A50DCFBD193641A3003231B9 /* HeBasicLoginVC.m */; };
 		A583ADF518CA12AA001E9ED0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A583ADF418CA12AA001E9ED0 /* Foundation.framework */; };
 		A583ADFA18CA12AA001E9ED0 /* HECommonClasses.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A583ADF918CA12AA001E9ED0 /* HECommonClasses.h */; };
 		A583ADFC18CA12AA001E9ED0 /* HECommonClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = A583ADFB18CA12AA001E9ED0 /* HECommonClasses.m */; };
@@ -53,6 +54,8 @@
 /* Begin PBXFileReference section */
 		A5028736192294CB00CDA080 /* HEBasicCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEBasicCollectionViewController.h; sourceTree = "<group>"; };
 		A5028737192294CB00CDA080 /* HEBasicCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEBasicCollectionViewController.m; sourceTree = "<group>"; };
+		A50DCFBC193641A3003231B9 /* HeBasicLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeBasicLoginVC.h; sourceTree = "<group>"; };
+		A50DCFBD193641A3003231B9 /* HeBasicLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeBasicLoginVC.m; sourceTree = "<group>"; };
 		A583ADF118CA12AA001E9ED0 /* libHECommonClasses.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHECommonClasses.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A583ADF418CA12AA001E9ED0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A583ADF818CA12AA001E9ED0 /* HECommonClasses-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HECommonClasses-Prefix.pch"; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				A583ADF718CA12AA001E9ED0 /* Supporting Files */,
+				A50DCFBC193641A3003231B9 /* HeBasicLoginVC.h */,
+				A50DCFBD193641A3003231B9 /* HeBasicLoginVC.m */,
 				A583AE1A18CA12CF001E9ED0 /* HEActivityIndicatorButton.h */,
 				A583AE1B18CA12CF001E9ED0 /* HEActivityIndicatorButton.m */,
 				A583AE1C18CA12CF001E9ED0 /* HEBasicTableViewController.h */,
@@ -276,6 +281,7 @@
 				A583AE2B18CA12CF001E9ED0 /* HEBasicTableViewController.m in Sources */,
 				A583ADFC18CA12AA001E9ED0 /* HECommonClasses.m in Sources */,
 				A583AE2D18CA12CF001E9ED0 /* HEInfoViewController.m in Sources */,
+				A50DCFBE193641A3003231B9 /* HeBasicLoginVC.m in Sources */,
 				A583AE2A18CA12CF001E9ED0 /* HEActivityIndicatorButton.m in Sources */,
 				A583AE2C18CA12CF001E9ED0 /* HEFacebookLoginView.m in Sources */,
 				A583AE2E18CA12CF001E9ED0 /* HorizontalSeparator.m in Sources */,
