@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class HEActivityIndicatorButton;
+
 @interface HeBasicLoginVC : UIViewController
 @property (nonatomic) float startBottomSpace;
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UILabel *warningsLabel;
+
+- (IBAction)login:(HEActivityIndicatorButton *)sender;
 @end
