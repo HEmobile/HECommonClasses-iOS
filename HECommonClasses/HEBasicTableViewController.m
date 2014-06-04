@@ -57,8 +57,10 @@
             [self.view addSubview:_blankImageView];
         }
         _blankImageView.hidden = NO;
+        self.tableView.hidden = YES;
     } else {
         _blankImageView.hidden = YES;
+        self.tableView.hidden = NO;
     }
 }
 
