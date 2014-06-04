@@ -50,9 +50,10 @@
     if ([self.dataArray count]==0 && self.blankImageName){
         if (!_blankImageView) {
             _blankImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height-64)];
+            _blankImageView.backgroundColor = [UIColor clearColor];
             [_blankImageView setContentMode:UIViewContentModeCenter];
             _blankImageView.image = [UIImage imageNamed:self.blankImageName];
-            _blankImageView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+            //_blankImageView.backgroundColor = [UIColor groupTableViewBackgroundColor];
             [self.view addSubview:_blankImageView];
         }
         _blankImageView.hidden = NO;
