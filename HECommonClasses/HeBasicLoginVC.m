@@ -12,6 +12,7 @@
 #import "NSManagedObject+LocalAccessors.h"
 
 //CGFloat const CCMBottomSpaceDefault = 276;
+float const HEKeyboardMargin = 8.0;
 
 @interface HeBasicLoginVC ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet HEActivityIndicatorButton *enterButton;
@@ -29,6 +30,7 @@
                                                                           action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
     self.startBottomSpace = self.bottomSpaceConstraint.constant;
+    self.keyboardMargin = HEKeyboardMargin;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -56,7 +58,7 @@
         height = keyboardFrame.size.width;
     }
 
-    self.bottomSpaceConstraint.constant = height + 16;
+    self.bottomSpaceConstraint.constant = height + self.keyboardMargin;
     
     [UIView animateWithDuration:animationDuration animations:^{
         [self.view layoutIfNeeded];

@@ -12,6 +12,7 @@
 
 @interface HeBasicLoginVC : UIViewController
 @property (nonatomic) float startBottomSpace;
+@property (nonatomic) float keyboardMargin;
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
