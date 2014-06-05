@@ -19,7 +19,8 @@
 @property (strong, nonatomic) NSArray *dataArray;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
 @property (weak,nonatomic) NSString *blankImageName;
-@property (strong, nonatomic) UIImageView *blankImage;
+@property (strong, nonatomic) UIImageView *blankImageView;
+@property float blankImageViewXPos;
 
 - (void)useRefreshControl;
 - (void)toogleBlankScreen;

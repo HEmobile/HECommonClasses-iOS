@@ -13,7 +13,7 @@
 @end
 
 @implementation HEBasicTableViewController
-@synthesize blankImage = _blankImageView;
+@synthesize blankImageView = _blankImageView;
 
 - (void)viewDidLoad
 {
@@ -21,6 +21,7 @@
 	// Do any additional setup after loading the view.
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.blankImageViewXPos = 64;
 }
 
 - (void)useRefreshControl
@@ -48,7 +49,7 @@
 {
     if ([self.dataArray count]==0 && self.blankImageName){
         if (!_blankImageView) {
-            _blankImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height-64)];
+            _blankImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.blankImageViewXPos, self.view.bounds.size.width, self.view.bounds.size.height-self.blankImageViewXPos)];
             _blankImageView.backgroundColor = [UIColor clearColor];
             [_blankImageView setContentMode:UIViewContentModeCenter];
             _blankImageView.image = [UIImage imageNamed:self.blankImageName];
