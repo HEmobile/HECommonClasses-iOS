@@ -12,9 +12,8 @@
 
 @end
 
-@implementation HEBasicTableViewController {
-    UIImageView *_blankImageView;
-}
+@implementation HEBasicTableViewController
+@synthesize blankImage = _blankImageView;
 
 - (void)viewDidLoad
 {
