@@ -13,14 +13,13 @@
 + (NSManagedObjectContext *)sharedManagedObjectContext;
 + (void)saveContext;
 
-+ (NSManagedObjectContext *)childManagedObjectContext;
-+ (void)rollbackChildContext;
-+ (void)syncChildContext;
++ (NSManagedObjectContext *)newChildManagedObjectContext;
++ (void)saveChildContext:(NSManagedObjectContext *)childManagedObjCxt;
 
 + (NSString *)entityName;//NSStringFromClass([self class])
 
 + (id)createInstance;
-+ (id)createInstanceInChildContext;
++ (id)createInstanceInContext:(NSManagedObjectContext *)moc;
 
 + (BOOL)importFromDictionary:(NSDictionary *)dictionary;
 + (NSUInteger)importAllFromArray:(NSArray *)listOfDictionaries;
@@ -30,10 +29,10 @@
 + (NSArray *)fetchAllWithSortDescriptor:(NSSortDescriptor *)sortDescriptor;
 + (NSArray *)fetchAllWithSortDescriptors:(NSArray *)sortDescriptors;
 + (NSArray *)fetchAllWithPredicate:(NSPredicate *)predicate andSortDescriptors:(NSArray *)sortDescriptors;
-
++ (NSArray *)fetchAllFromContext:(NSManagedObjectContext *)context withPredicate:(NSPredicate *)predicate andSortDescriptor:(NSSortDescriptor *)sortDescriptor;
 
 - (void)setAttribute:(NSString *)attributeName withObject:(id)object;
 - (BOOL)isNew;
-- (id)childObject;
+- (id)objectInContext:(NSManagedObjectContext *)context;
 - (id)mainContextObject;
 @end

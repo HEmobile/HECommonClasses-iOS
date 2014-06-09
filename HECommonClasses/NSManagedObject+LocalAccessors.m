@@ -28,16 +28,23 @@
     return managedObjectContext;
 }
 
-+ (NSManagedObjectContext *)childManagedObjectContext
++ (NSManagedObjectContext *)newChildManagedObjectContext
 {
-    NSManagedObjectContext *managedObjectContext = nil;
+    NSManagedObjectContext *childManagedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    childManagedObjectContext.parentContext = [self sharedManagedObjectContext];
     
+    return childManagedObjectContext;
+    /*
+    NSManagedObjectContext *managedObjectContext = nil;
+     
+     
     id appDelegate = [[UIApplication sharedApplication] delegate];
     if ([appDelegate respondsToSelector:@selector(childManagedObjectContext)]) {
         managedObjectContext = [appDelegate performSelector:@selector(childManagedObjectContext)];
     }
     
     return managedObjectContext;
+    */
 }
 
 + (void)saveContext
@@ -48,19 +55,18 @@
     }
 }
 
-+ (void)syncChildContext
++ (void)saveChildContext:(NSManagedObjectContext *)childManagedObjCxt
 {
-    id appDelegate = [[UIApplication sharedApplication] delegate];
-    if ([appDelegate respondsToSelector:@selector(syncChildContext)]) {
-        [appDelegate performSelector:@selector(syncChildContext)];
+    NSError *error = nil;
+    if (childManagedObjCxt != nil) {
+        if ([childManagedObjCxt hasChanges]) {
+            if ([childManagedObjCxt save:&error]) {
+                [self saveContext];
+            } else {
+                if (error != nil) NSLog(@"NSManagedObject.saveChildContext : Unresolved error %@, %@", error, [error userInfo]);
+            }
+        }
     }
-}
-
-+ (void)rollbackChildContext
-{
-    NSManagedObjectContext *managedObjectContext = [self childManagedObjectContext];
-    
-    [managedObjectContext rollback];
 }
 
 + (id)createInstance
@@ -73,23 +79,20 @@
     return instance;
 }
 
-+ (id)createInstanceInChildContext
++ (id)createInstanceInContext:(NSManagedObjectContext *)moc
 {
     id instance = nil;
-    NSManagedObjectContext *moc = [self childManagedObjectContext];
     if (moc != nil) {
         instance = [NSEntityDescription insertNewObjectForEntityForName:[self entityName] inManagedObjectContext:moc];
     }
     return instance;
 }
 
-- (id)childObject
+- (id)objectInContext:(NSManagedObjectContext *)context
 {
-    id instance;
-    if (self.managedObjectContext != [NSManagedObject childManagedObjectContext]) {
-        NSManagedObjectID *mid = [self objectID];
-        instance = [[NSManagedObject childManagedObjectContext] objectWithID:mid];
-    }
+    NSManagedObjectID *mid = [self objectID];
+    id instance = [context objectWithID:mid];
+    
     return instance;
 }
 
@@ -144,7 +147,7 @@
     return YES;
 }
 
-+ (NSArray *)fetchAllWithPredicate:(NSPredicate *)predicate andSortDescriptor:(NSSortDescriptor *)sortDescriptor
++ (NSArray *)fetchAllFromContext:(NSManagedObjectContext *)context withPredicate:(NSPredicate *)predicate andSortDescriptor:(NSSortDescriptor *)sortDescriptor
 {
     NSArray *results = nil;
     
@@ -153,13 +156,19 @@
     if (sortDescriptor) request.sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     
     NSError *error;
-    results = [[self sharedManagedObjectContext] executeFetchRequest:request error:&error];
+    results = [context executeFetchRequest:request error:&error];
     
     if (error != nil) {
-        NSLog(@"%@.fetchAllWithPredicate:andSortDescriptor ERROR: %@, %@", NSStringFromClass([self class]), error, [error userInfo]);
+        NSLog(@"%@.fetchAllFromContext:WithPredicate:andSortDescriptor ERROR: %@, %@", NSStringFromClass([self class]), error, [error userInfo]);
     }
     
     return results;
+}
+
+
++ (NSArray *)fetchAllWithPredicate:(NSPredicate *)predicate andSortDescriptor:(NSSortDescriptor *)sortDescriptor
+{
+    return [self fetchAllFromContext:[self sharedManagedObjectContext] withPredicate:predicate andSortDescriptor:sortDescriptor];
 }
 
 + (NSArray *)fetchAllWithPredicate:(NSPredicate *)predicate
