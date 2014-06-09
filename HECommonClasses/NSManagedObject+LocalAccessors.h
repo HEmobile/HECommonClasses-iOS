@@ -20,6 +20,7 @@
 + (NSString *)entityName;//NSStringFromClass([self class])
 
 + (id)createInstance;
++ (id)createInstanceInChildContext;
 
 + (BOOL)importFromDictionary:(NSDictionary *)dictionary;
 + (NSUInteger)importAllFromArray:(NSArray *)listOfDictionaries;
