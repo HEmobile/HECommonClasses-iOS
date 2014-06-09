@@ -35,4 +35,5 @@
 - (void)setAttribute:(NSString *)attributeName withObject:(id)object;
 - (BOOL)isNew;
 - (id)childObject;
+- (id)mainContextObject;
 @end
