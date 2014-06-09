@@ -83,6 +83,16 @@
     return instance;
 }
 
+- (id)childObject
+{
+    id instance;
+    if (self.managedObjectContext != [NSManagedObject childManagedObjectContext]) {
+        NSManagedObjectID *mid = [self objectID];
+        instance = [[NSManagedObject childManagedObjectContext] objectWithID:mid];
+    }
+    return instance;
+}
+
 - (void)setAttribute:(NSString *)attributeName withObject:(id)object
 {
     NSString *setSelectorName = [NSString stringWithFormat:@"set%@%@:",[[attributeName substringToIndex:1] uppercaseString],[attributeName substringFromIndex:1] ];
