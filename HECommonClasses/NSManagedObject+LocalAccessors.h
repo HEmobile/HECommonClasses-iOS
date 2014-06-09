@@ -13,6 +13,10 @@
 + (NSManagedObjectContext *)sharedManagedObjectContext;
 + (void)saveContext;
 
++ (NSManagedObjectContext *)childManagedObjectContext;
++ (void)rollbackChildContext;
++ (void)syncChildContext;
+
 + (NSString *)entityName;//NSStringFromClass([self class])
 
 + (id)createInstance;

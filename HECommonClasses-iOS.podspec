@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HECommonClasses-iOS"
-  s.version      = "0.0.9"
+  s.version      = "0.0.10"
   s.summary      = "Common classes in HE:mobile projects."
 
   s.description  = "A few classes that we use commonly in the several projects that we work on HE:mobile."

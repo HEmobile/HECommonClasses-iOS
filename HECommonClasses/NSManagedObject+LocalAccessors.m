@@ -28,6 +28,18 @@
     return managedObjectContext;
 }
 
++ (NSManagedObjectContext *)childManagedObjectContext
+{
+    NSManagedObjectContext *managedObjectContext = nil;
+    
+    id appDelegate = [[UIApplication sharedApplication] delegate];
+    if ([appDelegate respondsToSelector:@selector(childManagedObjectContext)]) {
+        managedObjectContext = [appDelegate performSelector:@selector(childManagedObjectContext)];
+    }
+    
+    return managedObjectContext;
+}
+
 + (void)saveContext
 {
     id appDelegate = [[UIApplication sharedApplication] delegate];
@@ -36,18 +48,35 @@
     }
 }
 
++ (void)syncChildContext
+{
+    id appDelegate = [[UIApplication sharedApplication] delegate];
+    if ([appDelegate respondsToSelector:@selector(syncChildContext)]) {
+        [appDelegate performSelector:@selector(syncChildContext)];
+    }
+}
+
++ (void)rollbackChildContext
+{
+    NSManagedObjectContext *managedObjectContext = [self childManagedObjectContext];
+    
+    [managedObjectContext rollback];
+}
+
 + (id)createInstance
 {
-    /*
-    id appDelegate = [[UIApplication sharedApplication] delegate];
-    id instance;
-    if ([appDelegate respondsToSelector:@selector(managedObjectContext)]) {
-        instance = [NSEntityDescription insertNewObjectForEntityForName:[self entityName]
-                                                 inManagedObjectContext:[appDelegate performSelector:@selector(managedObjectContext)]];
-    }
-    */
     id instance = nil;
     NSManagedObjectContext *moc = [self sharedManagedObjectContext];
+    if (moc != nil) {
+        instance = [NSEntityDescription insertNewObjectForEntityForName:[self entityName] inManagedObjectContext:moc];
+    }
+    return instance;
+}
+
++ (id)createInstanceInChildContext
+{
+    id instance = nil;
+    NSManagedObjectContext *moc = [self childManagedObjectContext];
     if (moc != nil) {
         instance = [NSEntityDescription insertNewObjectForEntityForName:[self entityName] inManagedObjectContext:moc];
     }
