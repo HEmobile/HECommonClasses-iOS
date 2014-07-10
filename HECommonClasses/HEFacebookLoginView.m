@@ -68,9 +68,11 @@
 - (void)login
 {
     [self startActivityIndicator];
+    /*
     if ([super respondsToSelector:@selector(buttonPressed:)]) {
         [super performSelector:@selector(buttonPressed:) withObject:self.button];
     }
+    */
 }
 #pragma clang diagnostic pop
 
