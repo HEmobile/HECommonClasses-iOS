@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5027E801975AD80001AEBAD /* HEBasicLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A5027E7F1975AD80001AEBAD /* HEBasicLoginVC.m */; };
 		A5028738192294CB00CDA080 /* HEBasicCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5028737192294CB00CDA080 /* HEBasicCollectionViewController.m */; };
 		A583ADF518CA12AA001E9ED0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A583ADF418CA12AA001E9ED0 /* Foundation.framework */; };
 		A583ADFA18CA12AA001E9ED0 /* HECommonClasses.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = A583ADF918CA12AA001E9ED0 /* HECommonClasses.h */; };
@@ -51,6 +52,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A5027E7E1975AD80001AEBAD /* HEBasicLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEBasicLoginVC.h; sourceTree = "<group>"; };
+		A5027E7F1975AD80001AEBAD /* HEBasicLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEBasicLoginVC.m; sourceTree = "<group>"; };
 		A5028736192294CB00CDA080 /* HEBasicCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEBasicCollectionViewController.h; sourceTree = "<group>"; };
 		A5028737192294CB00CDA080 /* HEBasicCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEBasicCollectionViewController.m; sourceTree = "<group>"; };
 		A583ADF118CA12AA001E9ED0 /* libHECommonClasses.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHECommonClasses.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				A583ADF718CA12AA001E9ED0 /* Supporting Files */,
+				A5027E7E1975AD80001AEBAD /* HEBasicLoginVC.h */,
+				A5027E7F1975AD80001AEBAD /* HEBasicLoginVC.m */,
 				A583AE1A18CA12CF001E9ED0 /* HEActivityIndicatorButton.h */,
 				A583AE1B18CA12CF001E9ED0 /* HEActivityIndicatorButton.m */,
 				A583AE1C18CA12CF001E9ED0 /* HEBasicTableViewController.h */,
@@ -277,6 +282,7 @@
 				A583ADFC18CA12AA001E9ED0 /* HECommonClasses.m in Sources */,
 				A583AE2D18CA12CF001E9ED0 /* HEInfoViewController.m in Sources */,
 				A583AE2A18CA12CF001E9ED0 /* HEActivityIndicatorButton.m in Sources */,
+				A5027E801975AD80001AEBAD /* HEBasicLoginVC.m in Sources */,
 				A583AE2C18CA12CF001E9ED0 /* HEFacebookLoginView.m in Sources */,
 				A583AE2E18CA12CF001E9ED0 /* HorizontalSeparator.m in Sources */,
 			);
